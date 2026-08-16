@@ -1,7 +1,7 @@
 import lightkurve as lk
 
 # Télécharge TOUS les quarters disponibles pour Kepler-10 (pas juste un seul)
-search_result = lk.search_lightcurve('Kepler-10', author='Kepler', exptime=1800)
+search_result = lk.search_lightcurve('Kepler-10', author='Kepler', exptime=1800, quarter=4)
 lc_collection = search_result.download_all()
 
 # Concatène tous les quarters en une seule courbe de lumière continue
